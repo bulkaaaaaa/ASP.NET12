@@ -1,0 +1,44 @@
+﻿@model List<WebApplication12.Models.Company>
+
+
+<h1>List of Companies</h1>
+
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Employee Count</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var company in Model)
+        {
+            <tr>
+                <td>@company.Name</td>
+                <td>@company.Location</td>
+                <td>@company.EmployeeCount</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    .styled-table {
+        border-collapse: collapse;
+        width: 100%;
+        background-color: #ffe6e6;
+    }
+
+        .styled-table th,
+        .styled-table td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .styled-table th {
+            color: white;
+            background-color: red;
+        }
+</style>
